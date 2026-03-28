@@ -1,6 +1,8 @@
 ## Repo for reference
 
-https://github.com/piyushsachdeva/Terraform-Full-Course-Aws
+1. https://github.com/piyushsachdeva/Terraform-Full-Course-Aws
+
+2. https://github.com/piyushsachdeva/Terraform-Full-Course-Azure
 
 
 ## Videos For Reference 
