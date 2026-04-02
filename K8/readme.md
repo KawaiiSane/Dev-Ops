@@ -8,7 +8,7 @@ check out the https://kind.sigs.k8s.io/
 
 ```bash
 kind --version
-kind create cluster --name first-cluster
+kind create cluster --name first-cluster # to create a kind cluster
 kuberctl cluster-info --context kind-first-cluster
 
 # constainer act as a node(small vm)
