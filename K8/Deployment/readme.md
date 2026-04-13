@@ -44,3 +44,4 @@ Note:- Pod is nothing but it encapsulated the container with it, which means whe
     kubectl rollout undo deployment nginx-deploy
 
     kubectl rollout status deploy
+
