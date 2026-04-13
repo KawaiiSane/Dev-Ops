@@ -1,0 +1,133 @@
+There are two way to deploy a pod in kubernetes
+1. Using kubectl command -- imperative way
+2. Using yaml file -- declarative way
+Using kubectl command
+
+```bash
+
+kubectl run nginx --image=nginx:latest
+
+or use 
+
+kubectl run --image=nginx nginx-pod
+
+```
+
+Using yaml file
+```yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+
+```   
+
+
+``` bash
+kubectl help
+kubectl run --help
+
+
+kubectl logs nginx-pod # to check the logs of the pod
+kubectl get pods # to check the status of the pod
+
+kubectl logs -f  nginx-pod # to follow the logs in real time
+
+kubectl get pods
+    NAME        READY   STATUS              RESTARTS   AGE
+    nginx-pod   0/1     ContainerCreating   0          6s
+
+
+```
+
+```
+kubectl describe pod nginx-pod
+kubectl describe pod nginx-pod
+
+Name:             nginx-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             kind-control-plane/172.18.0.2
+Start Time:       Fri, 03 Apr 2026 02:09:13 +0530
+Labels:           run=nginx-pod
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Containers:
+  nginx-pod:
+    Container ID:   containerd://51d4ce7e970656c69a200c8a0c1e5fde77983423264434ee4621fcead1efce4e
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:7150b3a39203cb5bee612ff4a9d18774f8c7caf6399d6e8985e97e28eb751c18
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Fri, 03 Apr 2026 02:09:32 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-h48tv (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-h48tv:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  20s   default-scheduler  Successfully assigned default/nginx-pod to kind-control-plane
+  Normal  Pulling    20s   kubelet            spec.containers{nginx-pod}: Pulling image "nginx"
+  Normal  Pulled     1s    kubelet            spec.containers{nginx-pod}: Successfully pulled image "nginx" in 18.706s (18.706s including waiting). Image size: 62958873 bytes.
+  Normal  Created    1s    kubelet            spec.containers{nginx-pod}: Container created
+  Normal  Started    1s    kubelet            spec.containers{nginx-pod}: Container started
+
+
+```
+
+
+```bash 
+  kubectl get pod nginx-pod -o yaml # to get the yaml of the pod
+  kubectl get pod nginx-pod -o json # to get the json of the pod
+
+```
+
+```
+## To create the pod, run the following command in the terminal:
+# kubectl apply -f pod.yml
+
+kubectl get pod # to check the pods
+```
+
+``` 
+kubectl run nginx-3 --image=nginx --dry-run=client -o yml > pod3.yml
+
+```
+
+Because each pod are behaving as a node you can go inside it as well.
+
+like :-
+  kubectl exec -it nginx-3 -- bash
+  

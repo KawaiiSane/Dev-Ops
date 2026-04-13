@@ -1,0 +1,24 @@
+name: Daily Submissions Tasks
+description: Template is for daily submissions of my learnings and task I do perform everyday.
+title: "Daily Submissions - [Date]"
+labels: ["daily-submissions", "learning"]
+assignees: ["AnuragSharma5893"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Daily Submissions - [Date]
+
+        ### Tasks Completed:
+        - [ ] Task 1: Description of the task completed.
+        - [ ] Task 2: Description of the task completed.
+        - [ ] Task 3: Description of the task completed.
+
+        ### Learnings:
+        - Learning 1: Brief description of what was learned.
+        - Learning 2: Brief description of what was learned.
+        - Learning 3: Brief description of what was learned.
+
+        ### Challenges Faced:
+        - Challenge 1: Brief description of the challenge faced and how it was overcome.
+        - Challenge 2: Brief description of the challenge faced and how it was overcome.

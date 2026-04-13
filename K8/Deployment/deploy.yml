@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sample
+  name: sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+      - image: ngix
+        name: ngix
+        resources: {}
+status: {}
