@@ -27,3 +27,10 @@ spec:
 
 ## to run this deployment, save the code to a file named "deploy.yml" and execute the following command in your terminal:
 ## kubectl apply -f deploy.yml
+
+## after that you can check the curl 
+## kubectl get pods -o wide
+
+## kubectl expose deploy nginx-deployment --port=80 ( this is for the ==== service/nginx-deployment exposed) 
+## to check type :- kubectl get svc
+
