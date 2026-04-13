@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: sample
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx        # ✅ fixed
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+
+
+## Note: The above code is a Kubernetes Deployment configuration for deploying an Nginx application. 
+## It specifies that 3 replicas of the Nginx container should be created, and each container will listen on port 80.
+## The deployment is labeled with "app: nginx" for easy identification and management.
+
+## to run this deployment, save the code to a file named "deploy.yml" and execute the following command in your terminal:
+## kubectl apply -f deploy.yml
