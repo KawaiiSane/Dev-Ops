@@ -1,0 +1,63 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-04-14T21:19:00Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "237"
+    uid: 1cd3d7f0-e55b-4b11-b113-ad238cf3c828
+  spec:
+    clusterIP: 10.96.0.1
+    clusterIPs:
+    - 10.96.0.1
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-04-14T21:26:38Z"
+    labels:
+      app: nginx-deployment
+    name: nginx-deployment
+    namespace: default
+    resourceVersion: "796"
+    uid: 3ec8b15c-f247-4770-883b-8bea136a07a6
+  spec:
+    clusterIP: 10.104.186.11
+    clusterIPs:
+    - 10.104.186.11
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 32444
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: nginx-deployment
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
