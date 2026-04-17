@@ -1,0 +1,9 @@
+        env:
+        - name: APP_NAME
+          value: "kubernetes-102"
+
+tag
+
+const appName = process.env.APP_NAME || "Default App";
+
+${AppName}

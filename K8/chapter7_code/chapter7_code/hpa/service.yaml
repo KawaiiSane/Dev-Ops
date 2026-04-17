@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-nginx
+  name: svc-nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 3000
+    nodePort: 30080
+  selector:
+    app: deploy-nginx
+  type: NodePort

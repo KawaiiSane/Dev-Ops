@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-nginx
+  name: deploy-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deploy-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy-nginx
+    spec:
+      hostNetwork: true
+      containers:
+      - image: piyushsachdeva/my-private-repo:latest
+        name: hello-app
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 200m
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+        - name: docker-secret
+

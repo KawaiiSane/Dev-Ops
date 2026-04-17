@@ -1,0 +1,30 @@
+ kubectl create cm <configmapname> \ --from-literal=firstname=piyush
+
+
+ 
+ env:
+        - name: FIRSTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-cm
+              key: firstname
+        - name: LASTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-cm
+              key: lastname
+
+---
+apiVersion: v1
+kind: ConfigMap
+data:
+  firstname: docker
+  lastname: kubernetes
+metadata:
+  name: app-cm
+
+
+
+envFrom:
+- configMapRef:
+    name: app-cm
