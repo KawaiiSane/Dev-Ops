@@ -2,7 +2,7 @@
 
 ## 📌 What is a Service in Kubernetes?
 
-In Kubernetes, a **Service** is an abstraction that exposes a set of Pods as a network service.
+In Kubernetes, a **Service** is an abstraction that exposes a set of Pods(the smallest deployable units you can create and manage) as a network service.
 
 Pods are ephemeral (they can die and get recreated with new IPs), so Services provide:
 

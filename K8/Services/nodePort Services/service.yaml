@@ -7,5 +7,6 @@ spec:
     app: nginx
   port:
     - protocol: TCP
-      port: 80
+      port: 801
       targetPort: 80
+  type: NodePort
