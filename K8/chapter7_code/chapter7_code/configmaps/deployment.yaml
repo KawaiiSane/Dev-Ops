@@ -22,11 +22,11 @@ spec:
       - image: piyushsachdeva/hello-app:4.0
         name: hello-app
         env:
-        - name: FIRST_NAME
+        - name: FIRST_NAME ## This is how you can use individual keys from the configmap as environment variables in the container
           valueFrom:
             configMapKeyRef:
               name: sample-cm
-              key: first
+              key: first 
         - name: LAST_NAME
           valueFrom:
             configMapKeyRef:

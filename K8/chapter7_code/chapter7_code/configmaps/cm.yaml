@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
-  first: piyush
-  last: sachdeva
+  first: anurag
+  last: sharmma
 kind: ConfigMap
 metadata:
   creationTimestamp: null

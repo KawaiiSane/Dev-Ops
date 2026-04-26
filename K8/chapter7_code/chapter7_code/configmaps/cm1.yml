@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  first: anurag
+  last: sharma
+kind: ConfigMap
+metadata:
+  name: sample-cm
