@@ -51,3 +51,26 @@ main() {
     top_processes
 }
 ```
+
+free → gives memory stats
+awk → processes columns
+
+
+
+## Column meaning (important)
+```
+Field	          Meaning
+$1	            "Mem:" (label)
+$2	            total memory
+$3	            used memory
+$4	            free memory
+
+```
+
+## Part	Meaning
+```
+/Mem/	        pick only the "Mem" row
+$3	            used memory
+$2	            total memory
+print	        output result
+```
