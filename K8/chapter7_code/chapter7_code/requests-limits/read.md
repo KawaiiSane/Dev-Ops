@@ -1,0 +1,1 @@
+OOM = OUT OF MEMORY
