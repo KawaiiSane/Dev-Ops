@@ -13,7 +13,7 @@ Instead of manually deploying or configuring applications, everything (apps, inf
 
 ## 1.2 GitOps Principles
 
-GitOps is built on four key principles:
+GitOps is built on four key principles: (DVAO Principle)
 
 1. **Declarative**
 
