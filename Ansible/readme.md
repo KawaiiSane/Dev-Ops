@@ -73,5 +73,3 @@ ansible-playbook modules/01-basics/02_gather_facts.yml -v
 - Playbooks are **idempotent** — running them twice produces the same result
 - The `package` module auto-detects apt/dnf — use it instead of `apt` or `dnf` for cross-OS playbooks
 - `become: yes` is needed for tasks that require root privileges
-
-
