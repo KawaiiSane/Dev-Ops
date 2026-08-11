@@ -10,7 +10,12 @@ For Software Architecture:-  https://roadmap.sh/software-architect?fl=0
 https://roadmap.sh/r/platform-engineer-fyhbc
 
 ```
+# Resources to prep
 
+```
+https://github.com/NotHarshhaa/DevOps-Interview-Questions = Collection of 1100+ DevOps interview questions with detailed answers covering CI/CD, Cloud (AWS, Azure, GCP), Kubernetes, Terraform, Ansible, Git, Jenkins, Docker, Monitoring, and more. Perfect for beginners and experienced professionals preparing for DevOps roles. Stay ahead in your interviews with real-world scenarios and best practices!
+
+```
 
 Try of architecture we do have
 1. monolithic :- A monolithic architecture is a single unified application where all components (UI, business logic, database access) are tightly integrated. 
