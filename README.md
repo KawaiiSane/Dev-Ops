@@ -21,7 +21,6 @@ Try of architecture we do have
 
 1. monolithic :- A monolithic architecture is a single unified application where all components (UI, business logic, database access) are tightly integrated. 
 
-
 2. Microlithic(or Microservices Architecture) :- A microservices architecture splits the application into multiple small, independent services, each responsible for a specific function.
 
 ```
