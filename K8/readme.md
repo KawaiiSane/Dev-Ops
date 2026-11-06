@@ -13,6 +13,7 @@ kuberctl cluster-info --context kind-first-cluster
 
 # constainer act as a node(small vm)
 
+
 if you do docker ps
    
     CONTAINER ID   IMAGE                  COMMAND                  CREATED      STATUS       PORTS                       NAMES
@@ -97,7 +98,6 @@ kind delete cluster --name first-cluster
 kind delete cluster --name multi-node
         Deleting cluster "multi-node" ...
         Deleted nodes: ["multi-node-worker3" "multi-node-worker" "multi-node-worker2" "multi-node-control-plane"]
-
 
 ```
 
